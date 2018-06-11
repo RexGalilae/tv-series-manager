@@ -26,6 +26,7 @@ def show_playlist():
 
 def update():
     if print_shows() is None:
+        print("No shows in playlist!")
         pak()
         return
 
@@ -39,8 +40,8 @@ options = {
     1 : ("New Show", new_show),
     2 : ("Update Show", update),
     3 : ("Show Playlist", show_playlist),
-    4 : ("Remove Show", exit),
-    5 : ("Download Show", exit),
+    4 : ("Remove Show (WIP)", exit),   #WIP
+    5 : ("Download Show (WIP)", exit), #WIP
     0 : ("Exit", exit)
 }
 
