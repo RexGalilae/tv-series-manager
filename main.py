@@ -1,6 +1,8 @@
 import os
 from writer import *
+import platform
 
+platform.system()
 def new_show():
     print("Show :", end=" ")
     name = input()
@@ -35,18 +37,20 @@ def update():
     update_show(num)
     pak()
 
-
 options = {
     1 : ("New Show", new_show),
     2 : ("Update Show", update),
     3 : ("Show Playlist", show_playlist),
-    4 : ("Remove Show (WIP)", exit),   #WIP
+    4 : ("Remove Show", exit),   #WIP
     5 : ("Download Show (WIP)", exit), #WIP
     0 : ("Exit", exit)
 }
 
 def clear_screen():
-    x = os.system('clear')
+    if platform.system() == 'Windows':
+        x = os.system('CLS')
+    else:
+        x = os.system('clear')
 
 
 def pak():
